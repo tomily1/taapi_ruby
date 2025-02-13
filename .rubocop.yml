@@ -1,0 +1,7 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
+
+# Disable the Style/Documentation cop
+Style/Documentation:
+  Enabled: false
