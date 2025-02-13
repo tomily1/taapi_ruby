@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'taapi_ruby'
-  spec.version       = '0.1.0'
+  spec.version       = '0.1.1'
   spec.authors       = ['tomily1']
   spec.email         = ['itomilayo@gmail.com']
 
