@@ -40,7 +40,7 @@ Create a client instance and use it to make requests to the TAAPI.io API. For ex
 
 ```ruby
 client = TaapiRuby::Client.new
-response = client.get_indicator('rsi', symbol: 'BTC/USD', interval: '1h')
+response = client.get_indicator('rsi', symbol: 'BTC/USDT', interval: '1h', exchange: 'binance')
 puts response
 ```
 

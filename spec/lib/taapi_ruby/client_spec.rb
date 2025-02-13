@@ -13,10 +13,10 @@ RSpec.describe TaapiRuby::Client do
   let(:client) { TaapiRuby::Client.new }
 
   it 'makes a request to the taapi.io API' do
-    stub_request(:get, 'https://api.taapi.io/rsi?apikey=test_api_key&symbol=BTC/USD&interval=1h')
+    stub_request(:get, 'https://api.taapi.io/rsi?exchange=binance&interval=1h&secret=test_api_key&symbol=BTC/USDT')
       .to_return(status: 200, body: '{"value": 70}', headers: { 'Content-Type' => 'application/json' })
 
-    response = client.get_indicator('rsi', symbol: 'BTC/USD', interval: '1h')
+    response = client.get_indicator('rsi', symbol: 'BTC/USDT', interval: '1h', exchange: 'binance')
     expect(response['value']).to eq(70)
   end
 end

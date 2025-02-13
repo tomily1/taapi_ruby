@@ -13,7 +13,7 @@ module TaapiRuby
 
     def get_indicator(indicator, params = {})
       uri = URI("#{BASE_URL}/#{indicator}")
-      uri.query = URI.encode_www_form(params.merge(apikey: @api_key))
+      uri.query = URI.encode_www_form(params.merge(secret: @api_key))
       response = Net::HTTP.get(uri)
       JSON.parse(response)
     end
