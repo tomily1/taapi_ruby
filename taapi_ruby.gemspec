@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'taapi_ruby/version'
+
 Gem::Specification.new do |spec|
   spec.name          = 'taapi_ruby'
-  spec.version       = '0.1.1'
+  spec.version       = TaapiRuby::VERSION
   spec.authors       = ['tomily1']
   spec.email         = ['itomilayo@gmail.com']
 
@@ -10,6 +14,9 @@ Gem::Specification.new do |spec|
   spec.description   = 'This gem provides a simple interface to interact with the taapi.io API.'
   spec.homepage      = 'https://github.com/tomily1/taapi_ruby'
   spec.license       = 'MIT'
+
+  spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['source_code_uri'] = 'https://github.com/tomily1/taapi_ruby'
 
   spec.files         = Dir['lib/**/*.rb']
   spec.bindir        = 'exe'
